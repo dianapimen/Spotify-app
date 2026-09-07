@@ -65,7 +65,7 @@ st.markdown("---")
 col_left, col_right = st.columns(2)
 
 with col_left:
-    st.subheader("📊 Distribución de Atributos Audio")
+    st.subheader("Distribución de Atributos Audio")
     # Creamos un boxplot de varios atributos para comparar
     fig, ax = plt.subplots(figsize=(8, 6))
     features = ['danceability', 'energy', 'valence', 'acousticness']
@@ -75,7 +75,7 @@ with col_left:
     st.pyplot(fig)
 
 with col_right:
-    st.subheader("🔝 Top 10 Canciones más Populares")
+    st.subheader("Top 10 Canciones más Populares")
     top_10 = df_filtered.nlargest(10, 'popularity')[['track_name', 'popularity']]
     
     fig2, ax2 = plt.subplots(figsize=(8, 6))
@@ -86,7 +86,7 @@ with col_right:
 
 # 3. ANÁLISIS DETALLADO (Scatter Plot)
 st.markdown("---")
-st.subheader("🎯 Relación: Energía vs Valencia (Estado de Ánimo)")
+st.subheader("Relación: Energía vs Valencia (Estado de Ánimo)")
 st.write("La valencia mide qué tan positiva es una canción.")
 
 fig3, ax3 = plt.subplots(figsize=(12, 5))
